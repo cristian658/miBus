@@ -5,6 +5,7 @@
 
 package cl.trans.urlconec;
 
+import cl.trans.classes.CookieManager;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,6 +15,8 @@ import java.net.URLConnection;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.net.HttpCookie.*;
+
 
 /**
  *
@@ -29,15 +32,24 @@ public class urlConect {
     private String  path = "d=busquedaParadero&servicio=-1&destino=-1&paradero=-1&busqueda_rapida=PC616+C08&ingresar_paradero=pj388";
     private Date  expires;
     private static DateFormat expiresFormat = new SimpleDateFormat("E, dd-MMM-yyyy k:m:s 'GMT'");
+    private CookieManager cm = new CookieManager();
+    
     
     public void getPag() throws MalformedURLException, IOException{
-
+// URLConnection conn = url.openConnection();
+//	    conn.connect();
+//	    cm.storeCookies(conn);
+//	    System.out.println(cm);
         url = new URL(domain+path);
         con = url.openConnection();
+        con.connect();
+        cm.storeCookies(con);
+        System.out.println(cm.toString());
         in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-        while ((linea = in.readLine()) != null) {
+        /*while ((linea = in.readLine()) != null) {
             System.out.println(linea);
-        }
+        }*/
     }
+    
 }
