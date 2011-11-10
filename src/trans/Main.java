@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 
 /**
  *
- * @author Usuarioi2k
+ * @author Cristian Quezada
  */
 public class Main {
 
