@@ -7,7 +7,7 @@ package cl.trans.classes;
 
 /**
  *
- * @author Usuarioi2k
+ * @author Cristian Quezada
  */
 public class paradero {
 
