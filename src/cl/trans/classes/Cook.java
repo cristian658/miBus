@@ -4,9 +4,8 @@
  */
 package cl.trans.classes;
 
-import org.apache.commons.httpclient.Cookie;
+import org.apache.http.cookie.Cookie;
 import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.methods.PostMethod;
 /**
  *
