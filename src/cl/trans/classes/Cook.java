@@ -6,6 +6,7 @@ package cl.trans.classes;
 
 import org.apache.http.cookie.Cookie;
 import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
 /**
  *
@@ -14,9 +15,9 @@ import org.apache.commons.httpclient.methods.PostMethod;
 public class Cook {
     
     private HttpClient client;
-    private PostMethod method;
+    private GetMethod method;
     
-    public Cook(HttpClient client,PostMethod method){
+    public Cook(HttpClient client,GetMethod method){
         
         this.client = client;
         this.method = method;
