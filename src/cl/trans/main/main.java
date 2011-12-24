@@ -18,7 +18,7 @@ public class main {
      
     
     public static void main(String[] args) {
-        url = new urlConect("pj388");
+        url = new urlConect("PC616");
         method = url.getPag();
         
         url.getParaderos(method);
