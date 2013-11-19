@@ -17,6 +17,7 @@ public class Cook {
     private HttpClient client;
     private GetMethod method;
     private String nombre;
+    private String apellido;
     
     public Cook(HttpClient client,GetMethod method){
         
